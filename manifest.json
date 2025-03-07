@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Transaction History",
+  "version": "1.0.0",
+  "description": "Tiện ích lấy lịch sử giao dịch từ ngân hàng",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://online.mbbank.com.vn/*",
+        "https://www.vietcombank.com.vn/*",
+        "https://www.techcombank.com.vn/*",
+        "https://www.bidv.com.vn/*",
+        "https://ebank.tpb.vn/*"
+      ],
+      "js": ["/js/transactions/index.js"]
+    }
+  ],
+  "permissions": ["activeTab", "cookies", "scripting", "storage"],
+  "host_permissions": [
+    "https://online.mbbank.com.vn/*",
+    "https://www.vietcombank.com.vn/*",
+    "https://www.techcombank.com.vn/*",
+    "https://www.bidv.com.vn/*",
+    "https://ebank.tpb.vn/*"
+  ],
+  "action": {
+    "default_popup": "popup/signin.html",
+    "default_icon": "/icons/icon_16.png"
+  },
+  "icons": {
+    "16": "/icons/icon_16.png",
+    "48": "/icons/icon_48.png",
+    "128": "/icons/icon_128.png"
+  }
+}

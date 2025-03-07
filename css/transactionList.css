@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 400px;
+}
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgba(199, 21, 133, 1);
+}
+.m_t20 {
+  margin-top: 20px;
+}
+.m_t10 {
+  margin-top: 10px;
+}
+.btn_acept {
+  padding: 10px;
+  background-color: rgba(199, 21, 133, 1); 
+  color: rgba(255, 255, 255, 1);
+  border: none;
+  border-radius: 10px;
+  width: 50%;
+  font-size: 15px ;
+}
+.d_fc {
+  display: flex;
+  flex-direction: column;
+}
+.message {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: rgba(255, 105, 180, 0.5);
+  border-radius: 15px;
+  font-size: 15px;
+  text-align: start;
+  color: rgba(255, 255, 255, 1);
+}
+.scroll {
+  max-height: 275px;
+  overflow-y: scroll;
+}

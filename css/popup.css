@@ -1,0 +1,84 @@
+body {
+  background-color: rgba(0, 0, 0, 0);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  text-align: center;
+}
+
+.title {
+  font-size: 40px;
+  color: rgba(199, 21, 133, 1);
+  font-weight: bold;
+}
+.login_form {
+  display: flex;
+  flex-direction: column;
+}
+.signup_form {
+  display: flex;
+  flex-direction: column;
+}
+.f_s15 {
+  font-size: 15px;
+}
+.username { 
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(255, 105, 180, 0.5);
+  color: rgba(255, 255, 255, 1);
+}
+.password { 
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(255, 105, 180, 0.5);
+  color: rgba(255, 255, 255, 1);
+}
+.email { 
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgba(255, 105, 180, 0.5);
+  color: rgba(255, 255, 255, 1);
+}
+input:focus {
+  outline: none;
+  border: none;
+}
+input::placeholder{
+  color: rgba(255, 255, 255, 1);
+}
+.m_t10 {
+  margin-top: 10px;
+}
+.m_t20 {
+  margin-top: 20px;
+}
+.button_submit {
+  display: flex;
+  justify-content: center;
+}
+.submit {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(199, 21, 133, 1); 
+  border: none;
+  width: 50%;
+  color: rgba(255, 255, 255, 1);
+}
+.c_lp {
+  color: rgba(199, 21, 133, 1) ;
+}
+.d_f {
+  display: flex;
+}
+.t_a {
+  justify-content: center;
+}
+.b_p {
+  border-bottom: 1px solid rgba(199, 21, 133, 1);
+}
