@@ -26,8 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
         throw new Error(data.message || "Đăng nhập thất bại");
       }
       alert("Đăng nhập thành công!");
+      chrome.storage.local.set({ token: data.access_token });
       localStorage.setItem("user", JSON.stringify(data.user));
-      window.location.href = "/popup/bank.html";
+      window.location.href = "/popup/selectBank.html";
     } catch (error) {
       alert(error.message);
     }
