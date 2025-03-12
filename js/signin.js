@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const loginForm = document.querySelector(".login_form");
   const loginBtn = document.querySelector("#login_btn");
-  const signupBtn = document.querySelector("#signup_btn");
   loginBtn.addEventListener("click", async function (event) {
     event.preventDefault();
 
@@ -27,13 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       alert("Đăng nhập thành công!");
       chrome.storage.local.set({ token: data.access_token });
-      localStorage.setItem("user", JSON.stringify(data.user));
+      console.log(data.access_token);
+      console.log(chrome.storage.local.get("token"));
       window.location.href = "/popup/selectBank.html";
     } catch (error) {
       alert(error.message);
     }
-  })
-  signupBtn.addEventListener('click', () => {
-    window.location.href = '/popup/signup.html'
   })
 })

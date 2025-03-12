@@ -1,4 +1,5 @@
 
+
 export const handler = () => {
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (!tabs || tabs.length === 0) {
@@ -34,7 +35,9 @@ export const handler = () => {
                 window.sendToBackend = async function (transactions) {
                   try {
                     const token = await chrome.storage.local.get("token");
-                    const response = await fetch("http://localhost:2000/transaction/add", {
+                    console.log(token);
+                    const API_ENDPONST = "http://localhost:2000/transaction/add";
+                    const response = await fetch(API_ENDPONST, {
                       method: "POST",
                       headers: {
                         "Content-Type": "application/json",
@@ -46,8 +49,10 @@ export const handler = () => {
                       throw new Error(`Lỗi khi gửi dữ liệu: ${response.statusText}`);
                     }
                     console.log("Gửi dữ liệu thành công lên backend!");
+                    alert("Đã lấy được dữ liệu giao dịch về hệ thống!");
                   } catch (error) {
                     console.error("Lỗi khi gửi dữ liệu", error);
+                    alert("Có lỗi xảy ra, vui lòng thử lại!");
                   }
                   return;
                 };
